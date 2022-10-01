@@ -1,6 +1,6 @@
 > [!NOTE]
 > **New major release addressing sporadic segmentation faults**
-> 
+>
 > The release 3.0.0 addresses sporadic segmentation faults noticed with recent kernel releases, please update your action to this new major release (e.g. @v3) if you start noticing random or systematic CI failures.
 
 # Run-On-Arch GitHub Action
@@ -14,7 +14,7 @@ A GitHub Action that executes commands on non-x86 CPU architecture (armv6, armv7
 
 This action requires three input parameters:
 
-* `arch`: CPU architecture: `armv6`, `armv7`, `aarch64`, `loongarch64`, `riscv64`, `s390x`, or `ppc64le`. See [Supported Platforms](#supported-platforms) for the full matrix.
+* `arch`: CPU architecture: `armv6`, `armv7`, `aarch64`, `loongarch64`, `riscv64`, `s390x`, `ppc64le` or `x86_64`.. See [Supported Platforms](#supported-platforms) for the full matrix.
 * `distro`: Linux distribution name: `ubuntu24.04`,`ubuntu22.04`,`ubuntu20.04`, `bookworm`,`bullseye`, `buster`, `stretch`,  `fedora_latest`, `alpine_latest` or `archarm_latest`. See [Supported Platforms](#supported-platforms) for the full matrix.
 * `run`: Shell commands to execute in the container.
 
@@ -84,7 +84,7 @@ jobs:
           - arch: aarch64
             distro: ubuntu24.04
           - arch: aarch64
-            distro: bullseye 
+            distro: bullseye
           - arch: ppc64le
             distro: alpine_latest
           - arch: none
@@ -166,6 +166,7 @@ This table details the valid `arch`/`distro` combinations:
 | riscv64  | ubuntu20.04, ubuntu22.04, ubuntu24.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_edge |
 | s390x    | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu24.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_latest |
 | ppc64le  | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu24.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_latest |
+| x86_64   | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_latest |
 
 
 Using an invalid `arch`/`distro` combination will fail.

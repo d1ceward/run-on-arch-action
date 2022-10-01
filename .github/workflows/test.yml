@@ -21,6 +21,12 @@ jobs:
             distro: bullseye
           - arch: s390x
             distro: trixie
+          - arch: aarch64
+            distro: fedora_latest
+          - arch: i686
+            distro: ubuntu22.04
+          - arch: riscv64
+            distro: alpine_edge
           - arch: ppc64le
             distro: alpine_latest
           - arch: loongarch64

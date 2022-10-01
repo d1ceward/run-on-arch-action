@@ -8,7 +8,7 @@ A GitHub Action that executes commands on non-x86 CPU architecture (armv6, armv7
 
 This action requires three input parameters:
 
-* `arch`: CPU architecture: `armv6`, `armv7`, `aarch64`, `riscv64`, `s390x`, `ppc64le`, or `x86_64`. See [Supported Platforms](#supported-platforms) for the full matrix.
+* `arch`: CPU architecture: `armv6`, `armv7`, `aarch64`, `riscv64`, `s390x`, `ppc64le`, `i686`, or `x86_64`. See [Supported Platforms](#supported-platforms) for the full matrix.
 * `distro`: Linux distribution name: `ubuntu22.04`,`ubuntu20.04`, `bookworm`,`bullseye`, `buster`, `stretch`,  `fedora_latest`, `alpine_latest` or `archarm_latest`. See [Supported Platforms](#supported-platforms) for the full matrix.
 * `run`: Shell commands to execute in the container.
 
@@ -158,7 +158,8 @@ This table details the valid `arch`/`distro` combinations:
 | riscv64  | ubuntu20.04, ubuntu22.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_edge |
 | s390x    | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_latest |
 | ppc64le  | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_latest |
-| x86_64  | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_latest |
+| i686     | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu_latest, alpine_latest |
+| x86_64   | stretch, buster, bullseye, bookworm, ubuntu20.04, ubuntu22.04, ubuntu_latest, ubuntu_rolling, ubuntu_devel, alpine_latest |
 
 
 Using an invalid `arch`/`distro` combination will fail.
